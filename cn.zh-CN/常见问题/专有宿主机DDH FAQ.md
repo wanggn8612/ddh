@@ -34,7 +34,7 @@ DDH是基于虚拟化技术的云服务器。弹性裸金属服务器（ECS Bare
 
 ## 怎么创建和释放DDH？ {#createAndRelease .section}
 
-目前您只能通过 [ECS管理控制台](https://ecs.console.aliyun.com/#/home) 创建或释放DDH。您只能释放 [按量付费](../../../../cn.zh-CN/产品定价/按量付费.md#) DDH。详细的限制条件和操作步骤，请参见 [创建DDH](../../../../cn.zh-CN/快速入门/创建DDH.md#) 和 [手动释放DDH](../../../../cn.zh-CN/快速入门/手动释放DDH.md#)。
+目前您只能通过 [ECS管理控制台](https://ecs.console.aliyun.com/#/home) 创建DDH。详细信息请参见 [创建DDH](../../../../cn.zh-CN/快速入门/创建DDH.md#)。预付费DDH到期一段时间后如果没有续费，则自动释放，详细信息请参见 [预付费](../../../../cn.zh-CN/产品定价/预付费.md#)。
 
 ## 怎么查看每台DDH上有多少可用资源？ {#viewAvailableResources .section}
 
