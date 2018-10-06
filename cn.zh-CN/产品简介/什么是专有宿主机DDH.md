@@ -6,7 +6,7 @@
 
 DDH与共享宿主机的区别如下图所示。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6617/891_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6617/1538806576891_zh-CN.png)
 
 ## 基本概念 {#section_qrr_mzm_tdb .section}
 
@@ -14,7 +14,7 @@ DDH与共享宿主机的区别如下图所示。
 
 ## DDH定价 {#section_rrr_mzm_tdb .section}
 
-DDH支持预付费和按量付费，更多计费信息，请参见 [计费概述](../../../../cn.zh-CN/产品定价/计费概述.md#)。
+DDH支持预付费，更多计费信息，请参见 [计费概述](../../../../cn.zh-CN/产品定价/计费概述.md#)。
 
 ## 相关服务 {#section_srr_mzm_tdb .section}
 
@@ -33,6 +33,5 @@ DDH上的ECS实例与共享宿主机上ECS实例的功能差异，请参见 [ECS
 -   [在不同DDH之间迁移ECS实例](../../../../cn.zh-CN/用户指南/在不同DDH之间迁移ECS实例.md#)
 -   [将ECS实例从共享宿主机迁移到DDH](../../../../cn.zh-CN/用户指南/将ECS实例从共享宿主机迁移到DDH.md#)
 -   在预付费DDH上，您可以将ECS实例的计费方式从按量付费转为预付费。详细信息，请参见 [按量付费转预付费](../../../../cn.zh-CN/产品定价/按量付费转预付费.md#)
--   如果是预付费DDH，您可以 [自动续费](../../../../cn.zh-CN/用户指南/自动续费.md#) 或 [手动续费](../../../../cn.zh-CN/用户指南/手动续费.md#)
--   如果是按量付费DDH，您可以 [设置自动释放DDH](../../../../cn.zh-CN/用户指南/设置自动释放DDH.md#) 或 [手动释放DDH](../../../../cn.zh-CN/快速入门/手动释放DDH.md#)
+-   对于预付费DDH，您可以 [自动续费](../../../../cn.zh-CN/用户指南/自动续费.md#) 或 [手动续费](../../../../cn.zh-CN/用户指南/手动续费.md#)
 
