@@ -10,7 +10,7 @@ Currently, you can purchase a DDH only in the [ECS console](https://ecs.console.
 
 Generally, you pay for DDH resources, such as CPU, memory, and local disks, on the basis of period of use. The number of ECS instances created on a DDH does not affect billing.
 
-When you create an ECS instance on a DDH, you only pay for the image, cloud disks, and network bandwidth. You do not pay for the local storage and computing resources, such as CPU and memory. For more information about the billing of ECS related resources, see [Billing of ECS resources on a DDH.](intl.en-US/Pricing/Billing of ECS resources on a DDH..md#).
+When you create an ECS instance on a DDH, you only pay for the image, cloud disks, and network bandwidth. You do not pay for the local storage and computing resources, such as CPU and memory. For more information about the billing of ECS related resources, see [billing of ECS resources on a DDH](intl.en-US/Pricing/Billing of ECS resources on a DDH..md#).
 
 ## Billing methods {#section_swg_mb5_tdb .section}
 
