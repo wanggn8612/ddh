@@ -4,7 +4,7 @@ You can learn the billing rules of the ECS resources when running ECS instances 
 
 For the ECS instances hosted on a DDH, you are not billed for using vCPU, memory, and local disks. However, you must pay for chargeable images, cloud disks, and network bandwidth.
 
-For more information about the billing rules of these ECS related resources, see [Subscription](../../../../intl.en-US/Pricing/Subscription.md#) in the Elastic Compute Service, [Billing of network bandwidth](../../../../intl.en-US/Pricing/Billing of network bandwidth.md#), and [Billing](../../../../intl.en-US/Pricing/Pay-As-You-Go billing.md#) in the Elastic IP Address Pricing.
+For more information about the billing rules of these ECS related resources, see [Subscription](../../../../intl.en-US/Pricing/Subscription.md#), [billing of network bandwidth](../../../../intl.en-US/Pricing/Billing of network bandwidth.md#), and [Pay-As-You-Go billing](../../../../intl.en-US/Pricing/Pay-As-You-Go billing.md#).
 
 When the Pre-paid DDH does not expire or, there are different resource billing scenarios associated with the ECS instance that are running in different States.
 
@@ -22,7 +22,7 @@ When an ECS instance hosted on a DDH is in the Stopped status, billing of the EC
 
 -   Pay-As-You-Go ECS instances
 
-    The [No fees for stopped VPC instances](../../../../intl.en-US/Pricing/No fees for stopped VPC instances.md#) feature does not apply to the ECS instances hosted on a DDH. When an instance is stopped, all its ECS related resources are billed as follows:
+    The [no fees for stopped VPC instances](../../../../intl.en-US/Pricing/No fees for stopped VPC instances.md#) feature does not apply to the ECS instances hosted on a DDH. When an instance is stopped, all its ECS related resources are billed as follows:
 
     -   Image: Retained. Billing continues for a chargeable image.
     -   Network bandwidth:
