@@ -2,14 +2,14 @@
 
 DDHs have the following limits.
 
-**Note:** If you are using an ECS instance on a DDH, besides the following limits, you must also consider the limits to ECS. For more information, see [Limits](../../../../intl.en-US/User Guide/Limits.md#) of Elastic Compute Service \(ECS\).
+**Note:** If you are using an ECS instance on a DDH, besides the following limits, you must also consider the limits to ECS. For more information, see [limit](../../../../intl.en-US/User Guide/Limits.md#) of Elastic Compute Service \(ECS\).
 
 |Item|Limit|Supply for higher configuration or unlock configuration rights|
 |:---|:----|:-------------------------------------------------------------|
 |Permission to create a DDH| Complete [real-name registration](https://www.alibabacloud.com/help/doc-detail/52595.htm) to create a DDH in the mainland China regions.
 
  |Not supported.|
-|Supported network types|Virtual Private Cloud \(VPC\). For more information about VPC, see [What is VPC?](../../../../intl.en-US/Product Introduction/What is VPC?.md#).|Not supported.|
+|Supported network types|Virtual Private Cloud \(VPC\). For more information about VPC, see [what is VPC](../../../../intl.en-US/Product Introduction/What is VPC?.md#).|Not supported.|
 |Billing methods links between a DDH and its ECS instances| Subscription DDH: For both Pay-As-You-Go and Subscription ECS instances.
 
  |Not supported.|
@@ -26,5 +26,5 @@ DDHs have the following limits.
 |ECS instance migration between shared cloud hosting and DDH| Only Pay-As-You-Go ECS instances can be migrated. Subscription ECS instances and Preemptible instances cannot be migrated.
 
  |Not supported.|
-|ECS instance migration between DDHs|under one account [Dedicated Host types](intl.en-US/Product Introduction/Dedicated Host types.md#) Only between DDHs of the same Dedicated Host type . ECS instances on a DDH with local SSD disks cannot be migrated.|Not supported.|
+|ECS instance migration between DDHs|Instances can be migrated only between DDHs of the same [dedicated host type](intl.en-US/Product Introduction/Dedicated Host types.md#) under one account. ECS instances on a DDH with local SSD disks cannot be migrated.|Not supported.|
 
