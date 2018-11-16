@@ -17,9 +17,9 @@ Currently, the available Dedicated Host types are shown in the following table.
 |Bandwidth \( Gbit/s\)|10 |10 | 10|25|25|25|25|
 |Packet forwarding rate \(Thousand pps\)|4,500|4,500|4,500|550|550|550|550|
 
-\*vCPU cores = physical CPU cores \* 2－vCPU cores reserved by the host
+vCPU cores = physical CPU cores \* 2－vCPU cores reserved by the host
 
-\*\*For more information about local SSD disks, see [local disks](../../../../intl.en-US/Product Introduction/Block storage/Local disks.md#) in the ECS Product Introduction.
+For more information about local SSD disks, see [local disks](../../../../intl.en-US/Product Introduction/Block storage/Local disks.md#) in the ECS Product Introduction.
 
-\*\*\* For all the ECS instances running on a DDH, make sure that the packet forwarding rate and the bandwidth capacity of the DDH are not exceeded. Network performance for each instance type, see [instance type families](../../../../intl.en-US/Product Introduction/Instance type families.md#).
+For all the ECS instances running on a DDH, make sure that the packet forwarding rate and the bandwidth capacity of the DDH are not exceeded. Network performance for each instance type, see [instance type families](../../../../intl.en-US/Product Introduction/Instance type families.md#).
 
