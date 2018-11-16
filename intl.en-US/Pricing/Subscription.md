@@ -75,7 +75,7 @@ If you have enabled auto-renewal, but a Subscription DDH is not renewed successf
 
 ## Renewal {#section_kvy_m25_tdb .section}
 
-After a billing cycle, you can perform[manual renewal](../../../../intl.en-US/User Guide/Manual renewal.md#).
+After a billing cycle, you can perform [manual renewal](../../../../intl.en-US/User Guide/Manual renewal.md#).
 
 Alternatively, you can enable [auto renewal](../../../../intl.en-US/User Guide/Auto renewal.md#) for a Subscription DDH. When this feature is enabled, Alibaba Cloud charges the subscription fee to your linked credit card or PayPal account on the expiration date \(T\). If the payment fails, Alibaba Cloud tries again on Day 7 \(T+6\) and Day 15 \(T+14\) until the payment is successful. If all the three payment attempts fail, the DDH shuts down.
 
