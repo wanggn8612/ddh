@@ -57,8 +57,8 @@ Using a Pay-As-You-Go DDH has the following limits:
 
 Log on to the [Billing Management console](https://billing.console.aliyun.com/#/expense/outline) to view details of the Pay-As-You-Go DDH bills.
 
--   Go to **Bills \>** \> **Pay-As-You-Go** page to get the paid details of a Pay-As-You-Go DDH.
--   Go to **Bills \>** \> **Unsettled** page to get the unpaid details of a Pay-As-You-Go DDH.
+-   Go to **Bills** \> **Pay-As-You-Go** page to get the paid details of a Pay-As-You-Go DDH.
+-   Go to **Bills** \> **Unsettled** page to get the unpaid details of a Pay-As-You-Go DDH.
 
 ## View usage {#section_cfh_xx5_tdb .section}
 
