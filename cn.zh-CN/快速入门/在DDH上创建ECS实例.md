@@ -6,11 +6,11 @@
 
 -   [创建DDH](intl.zh-CN/快速入门/创建DDH.md#)。
 -   如果要创建中国大陆地域的ECS实例，您必须先完成 [实名认证](https://www.alibabacloud.com/help/zh/doc-detail/52595.htm)。
--   在DDH所在地域里 [创建一个专有网络和交换机](https://help.aliyun.com/document_detail/65430.html)。
--   如果不使用系统自动创建的默认安全组，必须在目标地域 [创建一个安全组](https://help.aliyun.com/document_detail/25468.html) 并 [添加能满足您业务需求的安全组规则](https://help.aliyun.com/document_detail/25471.html)。默认安全组的详细信息，请参见 [默认安全组规则](https://help.aliyun.com/document_detail/31707.html)。
--   创建Linux实例时如果要绑定SSH密钥对，必须在目标地域 [创建一个SSH密钥对](https://help.aliyun.com/document_detail/51793.html)。
--   如果要设置自定义数据，必须准备 [实例自定义数据](https://help.aliyun.com/document_detail/49121.html)。
--   如果要让实例扮演某个角色，必须 [创建实例RAM角色，并授予角色相应的权限](https://help.aliyun.com/document_detail/61175.html)。
+-   在DDH所在地域里 [搭建专有网络](../../../../intl.zh-CN/快速入门/搭建专有网络.md#)。
+-   如果不使用系统自动创建的默认安全组，必须在目标地域 [创建一个安全组](../../../../intl.zh-CN/用户指南/安全组/创建安全组.md#) 并 [添加能满足您业务需求的安全组规则](../../../../intl.zh-CN/用户指南/安全组/添加安全组规则.md#)。默认安全组的详细信息，请参见 [默认安全组规则](../../../../intl.zh-CN/用户指南/安全组/安全组默认规则.md#)。
+-   创建Linux实例时如果要绑定SSH密钥对，必须在目标地域 [创建一个SSH密钥对](../../../../intl.zh-CN/用户指南/密钥对/创建 SSH 密钥对.md#)。
+-   如果要设置自定义数据，必须准备 [实例自定义数据](../../../../intl.zh-CN/用户指南/实例/实例自定义数据和元数据/实例自定义数据.md#)。
+-   如果要让实例扮演某个角色，必须 [创建实例RAM角色，并授予角色相应的权限](../../../../intl.zh-CN/用户指南/实例/实例RAM角色/通过控制台使用实例 RAM 角色.md#)。
 
 您可以指定一台DDH创建ECS实例。在DDH上只能创建VPC类型ECS实例。DDH上的ECS实例与共享宿主机上ECS实例的功能差异，请参见 [ECS实例功能对比](../../../../intl.zh-CN/产品简介/ECS实例功能对比.md#)。
 
@@ -31,7 +31,7 @@
         **说明：** 
 
         -   如果您要使用SSH密钥对，必须选择Linux系统。
-        -   如果您要设置实例自定义数据，只能选择特定的镜像。详细信息，请参见 [创建实例RAM角色，并授予角色相应的权限](https://help.aliyun.com/document_detail/61175.html)。
+        -   如果您要设置实例自定义数据，只能选择特定的镜像。详细信息，请参见 [创建实例RAM角色，并授予角色相应的权限](../../../../intl.zh-CN/用户指南/实例/实例RAM角色/通过控制台使用实例 RAM 角色.md#)。
     6.   选择存储： 
         -   **系统盘**：必选项，用于安装操作系统。指定系统盘的云盘类型和容量：
             -   云盘类型：当前地域可供选择的所有云盘类型。
@@ -57,11 +57,11 @@
         -   如果您的实例不需要访问公网或者要使用弹性公网IP（EIP）地址访问公网，不能选择 **分配公网IP地址**。
     3.  选择安全组：安全组中的规则必须满足您的业务需求。
 
-        **说明：** 如果您自己没有创建安全组，可以使用默认安全组。默认安全组的规则，请参见 [默认安全组规则](https://help.aliyun.com/document_detail/31707.html)。
+        **说明：** 如果您自己没有创建安全组，可以使用默认安全组。默认安全组的规则，请参见 [默认安全组规则](../../../../intl.zh-CN/用户指南/安全组/安全组默认规则.md#)。
 
     4.  添加弹性网卡。如果所选实例规格支持弹性网卡，您可以添加弹性网卡，并为网卡选择交换机。
 
-        **说明：** 这里添加的弹性网卡默认会随实例一起释放，您可以在ECS控制台或者使用 [DetachNetworkInterface](https://help.aliyun.com/document_detail/58514.html) 接口分离实例和网卡。
+        **说明：** 这里添加的弹性网卡默认会随实例一起释放，您可以在ECS控制台或者使用 [DetachNetworkInterface](../../../../intl.zh-CN/API参考/弹性网卡/DetachNetworkInterface.md#) 接口分离实例和网卡。
 
 7.   单击 **下一步：系统配置**，完成系统配置项： 
     -   选择并设置登录凭证。您可以直接设置，也可以选择 **创建后设置**。根据镜像选择不同的登录凭证：
@@ -76,7 +76,7 @@
     如果您有多台实例，为了方便管理，建议您为实例添加标签。
 
 9.   确认订单： 
-    -   在 **所选配置** 部分，确认配置信息。您可以单击 ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6630/15388114481347_zh-CN.png) 图标重新编辑配置。
+    -   在 **所选配置** 部分，确认配置信息。您可以单击 ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6630/15435709791347_zh-CN.png) 图标重新编辑配置。
     -   如果ECS实例计费方式为 **按量付费**，可以 **设置自动释放服务时间**。
     -   如果ECS实例计费方式为 **包年包月**，可以设置购买时长，并选择是否开启 **自动续费**。
 
@@ -90,9 +90,9 @@
 
 **说明：** 关于 **自定义列表项** 的设置，请参见 [在不同DDH之间迁移ECS实例](../../../../intl.zh-CN/用户指南/在不同DDH之间迁移ECS实例.md#)。
 
--   您可以通过FTP服务上传本地文件到ECS实例。关于部署FTP服务的详细操作，请参见 [使用ECS实例创建FTP站点](https://help.aliyun.com/document_detail/51998.html)。
+-   您可以通过FTP服务上传本地文件到ECS实例。关于部署FTP服务的详细操作，请参见 [使用ECS实例创建FTP站点](../../../../intl.zh-CN/建站教程/搭建FTP站点/Windows实例搭建FTP站点.md#)。
 -   创建实例后，建议您对操作系统做安全合规性检查和加固：
-    -   Linux实例，请参见 安全公告和技术 手册中的 [Linux操作系统加固](https://help.aliyun.com/document_detail/49809.html)。
-    -   Windows实例，请参见 安全公告和技术 手册中的 [Windows操作系统安全加固](https://help.aliyun.com/document_detail/49781.html)。
--   如果您随实例创建了数据盘，只有分区格式化后您才能正常使用数据盘，具体操作，请参见 [Linux\_格式化和挂载数据盘](https://help.aliyun.com/document_detail/25426.html) 或 [Windows\_格式化数据盘](https://help.aliyun.com/document_detail/25418.html)。
+    -   Linux实例，请参见 安全公告和技术 手册中的 [Linux操作系统加固](https://www.alibabacloud.com/help/zh/faq-detail/49809.htm)。
+    -   Windows实例，请参见 安全公告和技术 手册中的 [Windows操作系统安全加固](https://www.alibabacloud.com/help/faq-detail/49781.htm)。
+-   如果您随实例创建了数据盘，只有分区格式化后您才能正常使用数据盘，具体操作，请参见 [Linux 格式化数据盘](../../../../intl.zh-CN/个人版快速入门/步骤 4：格式化数据盘/Linux 格式化数据盘.md#) 或 [Windows 格式化数据盘](../../../../intl.zh-CN/个人版快速入门/步骤 4：格式化数据盘/Windows 格式化数据盘.md#)。
 
