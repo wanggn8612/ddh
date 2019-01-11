@@ -9,7 +9,7 @@ You can call this operation to set the release time or disable auto-release for 
 |Action|String|Yes|The operation that you want to perform. Set the value to ModifyDedicatedHostAutoReleaseTime.|
 |DedicatedHostId|String|Yes|The ID of the DDH that you want to automatically release.|
 |AutoReleaseTime|String|No|The auto-release time of a DDH. If you do not enter the AutoReleaseTime parameter, auto-release is disabled. The DDH will not be released when the scheduled time is reached.-   The difference between the current system time and the scheduled release time must be no less than half an hour and no more than three years.
--   If the seconds parameter \(`ss`\) is set to a value other than `00`, then 00 is automatically selected.
+-   If the seconds parameter \(`ss`\) is set to a value other than `00`, then `00` is automatically selected.
 
 |
 
