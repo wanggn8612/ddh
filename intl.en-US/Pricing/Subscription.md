@@ -7,13 +7,13 @@ Subscription means paying for a DDH in advance for a specified term. According t
 -   Pay-By-Year: The billing cycle is year.
 -   Pay-By-Month: The billing cycle is month.
 
-You can create Subscription or Pay-As-You-Go ECS instances on a Subscription DDH. For more information about the billing methods of ECS instances, see [pricing overview](../../../../intl.en-US/Pricing/Pricing overview.md#) of Elastic Compute Service \(ECS\).
+You can create Subscription or Pay-As-You-Go ECS instances on a Subscription DDH. For more information about the billing methods of ECS instances, see [pricing overview](../../../../../intl.en-US/Pricing/Pricing overview.md#) of *Elastic Compute Service \(ECS\)*.
 
 ## Payment Methods {#section_n5y_m25_tdb .section}
 
 You can pay for a Subscription DDH by using the following methods:
 
--   Credit cards or PayPal account linked to your account. For more information about how to link a credit card or PayPal account to your Alibaba Cloud account, see [add a payment method](https://www.alibabacloud.com/help/zh/doc-detail/50517.html) in Account Management.
+-   Credit cards or PayPal account linked to your account. For more information about how to link a credit card or PayPal account to your Alibaba Cloud account, see [add a payment method](https://www.alibabacloud.com/help/zh/doc-detail/50517.html) in *Account Management*.
 -   Coupons under your account that can be used to pay for Subscription products.
 
     **Note:** Log on to the [Billing Management](https://billing.console.aliyun.com/#/expense/outline) and go to **Coupon Management** page to view the **Applicable Scenarios** of your coupons and determine whether the coupons are applicable to Subscription products.
@@ -47,12 +47,12 @@ When an account is not overdue and an DDH is not renewed successfully within 15 
 
 |Period|DDH|ECS Resources|
 |:-----|:--|:------------|
-|Within 15 days after the expiration day|Shut down.|Once DDH shuts down, its ECS instances stop automatically and the system disks and data disks become unavailable, but data on them is retained. ECS instances can be migrated to another Subscription DDH for use . For more information, see [migrate ECS instances across DDHs](../../../../intl.en-US/User Guide/Migrate ECS across DDHs.md#).|
+|Within 15 days after the expiration day|Shut down.|Once DDH shuts down, its ECS instances stop automatically and the system disks and data disks become unavailable, but data on them is retained. ECS instances can be migrated to another Subscription DDH for use . For more information, see [migrate ECS instances across DDHs](../../../../../intl.en-US/User Guide/Migrate ECS across DDHs.md#).|
 |15 days after expiration|Released automatically.|Released automatically. All the data loss cannot be recovered.|
 
 ## Status changes after expiration {#section_cvy_m25_tdb .section}
 
-After a Subscription DDH expires, the status of its resources varies according to whether [auto renewal](../../../../intl.en-US/User Guide/Auto renewal.md#) is enabled.
+After a Subscription DDH expires, the status of its resources varies according to whether [auto renewal](../../../../../intl.en-US/User Guide/Auto renewal.md#) is enabled.
 
 ## Auto-renewal is disabled {#section_dvy_m25_tdb .section}
 
@@ -75,13 +75,13 @@ If you have enabled auto-renewal, but a Subscription DDH is not renewed successf
 
 ## Renewal {#section_kvy_m25_tdb .section}
 
-After a billing cycle, you can perform [manual renewal](../../../../intl.en-US/User Guide/Manual renewal.md#).
+After a billing cycle, you can perform [manual renewal](../../../../../intl.en-US/User Guide/Manual renewal.md#).
 
-Alternatively, you can enable [auto renewal](../../../../intl.en-US/User Guide/Auto renewal.md#) for a Subscription DDH. When this feature is enabled, Alibaba Cloud charges the subscription fee to your linked credit card or PayPal account on the expiration date \(T\). If the payment fails, Alibaba Cloud tries again on Day 7 \(T+6\) and Day 15 \(T+14\) until the payment is successful. If all the three payment attempts fail, the DDH shuts down.
+Alternatively, you can enable [auto renewal](../../../../../intl.en-US/User Guide/Auto renewal.md#) for a Subscription DDH. When this feature is enabled, Alibaba Cloud charges the subscription fee to your linked credit card or PayPal account on the expiration date \(T\). If the payment fails, Alibaba Cloud tries again on Day 7 \(T+6\) and Day 15 \(T+14\) until the payment is successful. If all the three payment attempts fail, the DDH shuts down.
 
 ## Conversion of billing methods {#section_lvy_m25_tdb .section}
 
-Currently, conversion of billing methods of a DDH is not supported. However, you can convert the billing method of an ECS instance from Pay-As-You-Go to Subscription on a Subscription DDH. For more information, see [switch from Pay-As-You-Go to Subscription billing](../../../../intl.en-US/Pricing/Limits.md#).
+Currently, conversion of billing methods of a DDH is not supported. However, you can convert the billing method of an ECS instance from Pay-As-You-Go to Subscription on a Subscription DDH. For more information, see [switch from Pay-As-You-Go to Subscription billing](../../../../../intl.en-US/Pricing/Switch from Pay-As-You-Go to Subscription billing.md#).
 
 ## Limits {#section_mvy_m25_tdb .section}
 
