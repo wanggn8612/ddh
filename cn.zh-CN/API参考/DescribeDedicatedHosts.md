@@ -1,30 +1,30 @@
 # DescribeDedicatedHosts {#DescribeDedicatedHosts .reference}
 
-查询一台或多台专有宿主机的详细信息。包括专有宿主机的物理性能指标、虚拟机器码、使用状态和已创建的 ECS 实例列表等。
+查询一台或多台专有宿主机的详细信息。包括专有宿主机的物理性能指标、虚拟机器码、使用状态和已创建的ECS实例列表等。
 
 ## 请求参数 {#RequestParameter .section}
 
 |名称|类型|是否必需|描述|
 |:-|:-|:---|:-|
 |Action|String|是|系统规定参数。取值：DescribeDedicatedHosts|
-|RegionId|String|是|专有宿主机所属的地域 ID。您可以调用[DescribeRegions](../../cn.zh-CN/API 参考/地域/DescribeRegions.md#)查看最新的阿里云地域列表。|
-|ZoneId|String|否|可用区 ID。|
-|DedicatedHostIds|Array|否|专有宿主机 ID 列表。单次最多支持 100 个 ID ，多个 ID 用一个格式类似\[“dh- xxxxxxxxx”, “dh- yyyyyyyyy”, … “dh- zzzzzzzzz”\]的 JSON 数组表示，ID 之间用半角逗号（`,`）隔开。|
+|RegionId|String|是|专有宿主机所属的地域ID。您可以调用[DescribeRegions](../../cn.zh-CN/API参考/地域/DescribeRegions.md#)查看最新的阿里云地域列表。|
+|ZoneId|String|否|可用区ID。|
+|DedicatedHostIds|Array|否|专有宿主机ID列表。单次最多支持100个ID ，多个ID用一个格式类似\[“dh- xxxxxxxxx”, “dh- yyyyyyyyy”, … “dh- zzzzzzzzz”\]的JSON 数组表示，ID之间用半角逗号（`,`）隔开。|
 |DedicatedHostName|String|否|专有宿主机名称。|
 |DedicatedHostType|String|否|专有宿主机类型。|
-|Status|String|否|专有宿主机的使用状态。取值范围：-   available（默认）：可用状态 。
+|Status|String|否|专有宿主机的使用状态。取值范围： -   available（默认）：可用状态 。
 -   under-assessment：故障潜伏期，专有宿主机可能会出故障。
 -   permanent-failure：永久性故障，专有宿主机不可用。
 
-|
-|Tag.n.Key|String|否|专有宿主机的标签键。n的取值范围：\[1, 20\]。一旦传入该值，则不允许为空字符串。最多支持64个字符，不能以aliyun、acs:、http://或者https://开头。|
-|Tag.n.Value|String|否|专有宿主机的标签值。n的取值范围：\[1, 20\]。一旦传入该值，可以为空字符串。最多支持128个字符，不能以aliyun、acs:、http://或者https://开头。|
-|PageNumber|Integer|否|响应信息的页码数。默认值：1
+ |
+|Tag.n.Key|String|否|专有宿主机的标签键。n 的取值范围：\[1, 20\]。一旦传入该值，则不允许为空字符串。最多支持 64 个字符，不能以 aliyun、acs:、http:// 或者 https:// 开头。|
+|Tag.n.Value|String|否|专有宿主机的标签值。n的取值范围：\[1, 20\]。一旦传入该值，可以为空字符串。最多支持 128 个字符，不能以 aliyun、acs:、http:// 或者 https:// 开头。|
+|PageNumber|Integer|否|响应信息的页码数。 默认值：1
 
-|
+ |
 |PageSize|Integer|否|响应信息的每页行数。最大值：100 默认值：10
 
-|
+ |
 
 ## 返回参数 {#ResponseParameter .section}
 
@@ -35,71 +35,75 @@
 |PageSize|Integer|输入时设置的每页行数。|
 |DedicatedHosts|Array of [DedicatedHostAttributesType](#)|专有宿主机的详细信息集合。|
 
-**DedicatedHostAttributesType**
+ **DedicatedHostAttributesType** 
 
 |名称|类型|描述|
 |:-|:-|:-|
-|DedicatedHostId|String|专有宿主机 ID。|
+|DedicatedHostId|String|专有宿主机ID。|
 |MachineId|String|专有宿主机虚拟机器码。|
 |DedicatedHostName|String|专有宿主机名称。|
 |DedicatedHostType|String|专有宿主机类型。|
 |Description|String|专有宿主机描述。|
-|RegionId|String|地域 ID。|
-|ZoneId|String|可用区 ID。|
+|RegionId|String|地域ID。|
+|ZoneId|String|可用区ID。|
 |Sockets|Integer|物理处理器（CPU）数量。|
-|Cores|Integer|单个 CPU 的核数。|
-|SupportedInstanceTypeFamilies|Array of [SupportedInstanceTypeFamilySetType](#)|专有宿主机支持的 ECS 实例规格族。|
+|Cores|Integer|单个CPU的核数。|
+|SupportedInstanceTypeFamilies|Array of [SupportedInstanceTypeFamilySetType](#)|专有宿主机支持的ECS实例规格族。|
 |Capacity|Array of [DedicatedHostCapacity](#)|专有宿主机性能指标集合。|
-|Instances|Array of [HostInstance](#)|专有宿主机上已创建的 ECS 实例信息集合。|
+|Instances|Array of [HostInstance](#)|专有宿主机上已创建的ECS实例信息集合。|
 |Status|String|专有宿主机的使用状态。可能值：Available | Under-Assessment | Permanent-Failure|
-|CreationTime|String|创建时间。按照[ISO8601](../../cn.zh-CN/API 参考/附录/时间格式.md#)标准表示，并需要使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。|
+|CreationTime|String|创建时间。按照[ISO8601](../../cn.zh-CN/API参考/附录/时间格式.md#)标准表示，并需要使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。|
 |ChargeType|String|专有宿主机的计费方式。|
 |SaleCycle|String|预付费专有宿主机的计费周期。|
-|ExpiredTime|String|预付费专有宿主机的到期时间。按照[ISO8601](../../cn.zh-CN/API 参考/附录/时间格式.md#)标准表示，并需要使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。|
+|ExpiredTime|String|预付费专有宿主机的到期时间。按照[ISO8601](../../cn.zh-CN/API参考/附录/时间格式.md#)标准表示，并需要使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。|
 |OperationLocks|Array of [OperationLocksType]()|专有宿主机资源被锁定原因。|
+|AutoPlacement|String|专有宿主机是否加入自动部署资源池。取值范围： -   on：加入自动部署资源池。
+-   off：不加入自动部署资源池。
 
-**DedicatedHostCapacity**
+ |
+
+ **DedicatedHostCapacity** 
 
 |名称|类型|描述|
 |:-|:-|:-|
-|TotalVcpus|Integer|vCPU 总核数。|
-|AvailableVcpus|Integer|剩余的 vCPU 核数。|
-|TotalMemory|Float|内存总容量，单位 GiB。|
-|AvailablevMemory|Float|剩余的内存容量，单位 GiB。|
-|TotalDisk|Integer|本地盘总容量，单位 GiB。|
-|AvailableDisk|Integer|剩余的本地盘容量，单位 GiB。|
+|TotalVcpus|Integer|vCPU总核数。|
+|AvailableVcpus|Integer|剩余的vCPU核数。|
+|TotalMemory|Float|内存总容量，单位：GiB。|
+|AvailablevMemory|Float|剩余的内存容量，单位：GiB。|
+|TotalDisk|Integer|本地盘总容量，单位：GiB。|
+|AvailableDisk|Integer|剩余的本地盘容量，单位：GiB。|
 |LocalStorageCategory|String|本地盘类型。|
 
-**HostInstance**
+ **HostInstance** 
 
 |名称|类型|描述|
 |:-|:-|:-|
-|InstanceId|String|专有宿主机上创建的 ECS 实例 ID。|
-|InstanceType|String|专有宿主机上创建的 ECS 实例类型。|
+|InstanceId|String|专有宿主机上创建的ECS实例ID。|
+|InstanceType|String|专有宿主机上创建的ECS实例类型。|
 
-**SupportedInstanceTypeFamilySetType**
+ **SupportedInstanceTypeFamilySetType** 
 
 |名称|类型|描述|
 |:-|:-|:-|
-|SupportedInstanceTypeFamily|String|专有宿主机上支持创建的 ECS 实例规格族。|
+|SupportedInstanceTypeFamily|String|专有宿主机上支持创建的ECS实例规格族。|
 
-**OperationLocksType**
+ **OperationLocksType** 
 
 |名称|类型|描述|
 |:-|:-|:-|
 |LockReason|Array of [LockReasonType]()|资源锁定原因。|
 
-**LockReasonType**
+ **LockReasonType** 
 
 |名称|类型|描述|
 |:-|:-|:-|
-|LockReason|String|锁定类型。可能值：financial：因账号欠费被锁定。
+|LockReason|String|锁定类型。可能值： financial：因账号欠费被锁定。
 
-|
+ |
 
 ## 示例 {#Samples .section}
 
-**请求示例**
+ **请求示例** 
 
 ```
 https://ecs.aliyuncs.com/?Action=DescribeDedicatedHosts
@@ -107,7 +111,7 @@ https://ecs.aliyuncs.com/?Action=DescribeDedicatedHosts
 &<公共请求参数>
 ```
 
-**返回示例**
+ **返回示例** 
 
 **XML 格式**
 
@@ -186,7 +190,7 @@ https://ecs.aliyuncs.com/?Action=DescribeDedicatedHosts
 </DescribeDedicatedHostsResponse>
 ```
 
-**JSON 格式**
+ **JSON 格式** 
 
 ```
 {
@@ -289,6 +293,6 @@ https://ecs.aliyuncs.com/?Action=DescribeDedicatedHosts
 
 |错误代码|错误信息|HTTP 状态码|说明|
 |:---|:---|:-------|:-|
-|DedicatedHostType.Invalid|The specified DedicatedHostType is invalid.|400|指定的 DedicatedHostType 无效。|
+|DedicatedHostType.Invalid|The specified DedicatedHostType is invalid.|400|指定的DedicatedHostType无效。|
 |InternalError|The request processing has failed due to some unknown error,exception or failure.|500|内部错误。|
 
