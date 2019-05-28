@@ -5,7 +5,7 @@ You can create an ECS instance on a specified DDH, but only VPC-Connected ECS in
 Before you create an ECS instance on a specified DDH, complete the following:
 
 -   [Create a DDH](intl.en-US/Quick Start/Create a DDH.md#).
--   [Register by using your real name](https://www.alibabacloud.com/help/zh/doc-detail/52595.htm) if you want to create an ECS instance in a region inside mainland China.
+-   [Register by using your real name](https://www.alibabacloud.com/help/doc-detail/52595.htm) if you want to create an ECS instance in a region inside mainland China.
 -   [Create a VPC and VSwitch](../../../../intl.en-US/Quick Start/Create a VPC.md#) in the region where the DDH is located.
 -   If you do not want to use the default security group created by system, you must [create a security group](../../../../intl.en-US/Security/Security groups/Create a security group.md#) and [add security group rules](../../../../intl.en-US/Security/Security groups/Add security group rules.md#). For more information, see [default security group rules](../../../../intl.en-US//Default security group rules.md#).
 -   [Create an SSH key pair](../../../../intl.en-US/Security/Key pairs/How do I use an SSH key pair?.md#) for creating a Linux instance authenticated by using a key pair.
