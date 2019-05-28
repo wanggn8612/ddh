@@ -84,7 +84,7 @@ You can create an ECS instance on a specified DDH. Only VPC-Connected ECS instan
 
     -   Confirm Instance Cost. It is the sum of the cost of the system disk, the data disks \(if any\), and public traffic.
     -   Read and confirm the **ECS Service Terms and Product Terms of Service**.
-10. Click **Create Order**。
+10. Click **Create Order**.
 
 After the instance is created, click **ECS Console** to go back to the ECS console to view the created ECS instance. In the **Instance** page, you can view the instance ID, the public IP address, and the private IP address of the new created instance. By setting the **Set Display Items**, you can view the Dedicated Host where the instance is hosted in the instance list.
 
