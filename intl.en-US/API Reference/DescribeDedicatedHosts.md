@@ -1,113 +1,117 @@
 # DescribeDedicatedHosts {#DescribeDedicatedHosts .reference}
 
-You can call this operation to query details about one or more DDHs, including physical performance specifications, virtual machine code, service status, and list of instances that you have created.
+You can call this operation to query the details about one or more Dedicated Hosts \(DDHs\), including the physical performance specifications, virtual machine code, service status, and list of Elastic Compute Service \(ECS\) instances that you have created.
 
 ## Request parameters {#RequestParameter .section}
 
-|Name|Type|Required|Description|
-|:---|:---|:-------|:----------|
-|Action|String|Yes|The operation that you want to perform. Set the value to DescribeDedicatedHosts|
-|RegionId|String|Yes|The ID of the region where the DDH is created.For more information, call [DescribeRegions](../../intl.en-US/API Reference/Regions/DescribeRegions.md#) to obtain the latest region list.|
-|ZoneId|String|No|The ID of the zone.|
-|DedicatedHostIds|Array|No|The list of DDH IDs. A list contains up to 100 DDH IDs. Multiple DDH IDs are displayed as JSON arrays, such as \[“dh- xxxxxxxxx”, “dh- yyyyyyyyy”, … “dh- zzzzzzzzz”\]. IDs are separated by commas \(`,`\).|
+|Parameter|Type|Required|Description|
+|:--------|:---|:-------|:----------|
+|Action|String|Yes|The operation that you want to perform. Set this parameter to DescribeDedicatedHosts.|
+|RegionId|String|Yes|The region ID of the DDH.For more information, call [DescribeRegions](../../intl.en-US/API Reference/Regions/DescribeRegions.md#) to obtain the latest region list.|
+|ZoneId|String|No|The zone ID of the DDH.|
+|DedicatedHostIds|Array|No|The list of DDH IDs. You can enter a maximum of 100 DDH IDs at a time. Multiple DDH IDs are displayed as a JSON array, such as \["dh- xxxxxxxxx", "dh- yyyyyyyyy", …, "dh- zzzzzzzzz"\]. Separate multiple IDs with a comma \(`,`\).|
 |DedicatedHostName|String|No|The name of the DDH.|
 |DedicatedHostType|String|No|The type of the DDH.|
-|Status|String|No|The service status of the DDH. Valid values:-   Available \(default value\): The DDH is available. You can use the DDH.
--   under-assessment: The DDH has potential failures. Failures may occur when you use the DDH.
--   permanent-failure: The DDH has permanent failures. You cannot use the DDH.
+|Status|String|No|The service status of the DDH. Valid values: -   Available \(default value\): specifies that the DDH is available for use.
+-   Under-Assessment: specifies that the DDH has potential failures and may fail when you use it.
+-   Permanent-Failure: specifies that the DDH has permanent failures. You cannot use the DDH.
 
-|
-|Tag.n.Key| String|No|Dedicated HostThe key of a tag of which n is from 1 to 20. Once you use this parameter, it cannot be a null string. It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://".|
-|Tag.n.Value| String|No|Dedicated HostThe value of a tag of which n is a number from 1 to 20. Once you use this parameter, it can be a null string. It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://".|
-|PageNumber|Integer|Optional|The number of pages that contain response information.Default value: 1.
+ |
+|Tag.n.Key|String|No|DDHThe key of a tag of which n is from 1 to 20. Once you use this parameter, it cannot be a null string. It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://".|
+|Tag.n.Value|String|No|DDHThe value of a tag of which n is a number from 1 to 20. Once you use this parameter, it can be a null string. It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://".|
+|PageNumber|Integer|No|The number of the page to return. Default value: 1.
 
-|
-|PageSize|Integer|No|The number of rows per page that the response content contains. Maximum value: 100 Default value: 10
+ |
+|PageSize|Integer|No|The number of entries to return on each page. Maximum value: 100. Default value: 10.
 
-|
+ |
 
 ## Response parameters {#ResponseParameter .section}
 
-|Name|Type|Required|
-|:---|:---|:-------|
+|Parameter|Type|Description|
+|:--------|:---|:----------|
 |TotalCount|Integer|The total number of DDHs.|
-|PageNumber|Integer|The number of pages contained in the DDH list.|
-|PageSize|Integer|The number of rows per page contained in the response results.|
-|DedicatedHosts|Array of [DedicatedHostAttributesType](#)|The collection of DDH details.|
+|PageNumber|Integer|The page number of the returned DDH list.|
+|PageSize|Integer|The number of entries returned on each page.|
+|DedicatedHosts|Array of [DedicatedHostAttributesType](#)|The details about DDHs.|
 
-**DedicatedHostAttributesType**
+ **DedicatedHostAttributesType** 
 
-|Name|Type|Description|
-|:---|:---|:----------|
+|Parameter|Type|Description|
+|:--------|:---|:----------|
 |DedicatedHostId|String|The ID of the DDH.|
 |MachineId|String|The virtual machine code of the DDH.|
 |DedicatedHostName|String|The name of the DDH.|
 |DedicatedHostType|String|The type of the DDH.|
 |Description|String|The description of the DDH.|
-|RegionId|String|The ID of the region.|
-|ZoneId|String|The ID of the zone.|
+|RegionId|String|The region ID of the DDH.|
+|ZoneId|String|The zone ID of the DDH.|
 |Sockets|Integer|The number of physical CPUs.|
-|Cores.|Integer|The number of cores in a CPU.|
-|SupportedInstanceTypeFamilies|Array of [SupportedInstanceTypeFamilySetType](#)|The ECS instance type family supported by a DDH.|
-|Capacity|Array of [DedicatedHostCapacity](#)|The collection of DDH performance specifications.|
-|Instances|Array of [HostInstance](#)|The collection of details about ECS instances that you have created on a DDH.|
-|Status |String|The service status of the DDH. Possible values: Available | Under-Assessment | Permanent-Failure|
-|CreationTime|String|The time of creation.The time format follows the [ISO8601](../../intl.en-US/API Reference/Appendix/ISO 8601 Time Format.md#) standard, and the UTC time is used. The format is yyyy-MM-ddTHH:mm:ssZ.|
+|Cores|Integer|The number of cores in a CPU.|
+|SupportedInstanceTypeFamilies|Array of [SupportedInstanceTypeFamilySetType](#)|The ECS instance type family supported by the DDH.|
+|Capacity|Array of [DedicatedHostCapacity](#)|The performance specifications of the DDH.|
+|Instances|Array of [HostInstance](#)|The details about ECS instances that you have created on the DDH.|
+|Status|String|The service status of the DDH. Valid values: Available, Under-Assessment, and Permanent-Failure.|
+|CreationTime|String|The time when the DDH was created.The time format follows the [ISO8601](../../intl.en-US/API Reference/Appendix/ISO 8601 Time Format.md#) standard, and the UTC time is used. The format is yyyy-MM-ddTHH:mm:ssZ.|
 |ChargeType|String|The billing method of the DDH.|
-|Salecycle|String|The billing cycle of a Subscription-based DDH.|
-|ExpiredTime|String|The expiration time of a Subscription-based DDH.The time format follows the [ISO8601](../../intl.en-US/API Reference/Appendix/ISO 8601 Time Format.md#) standard, and the UTC time is used. The format is yyyy-MM-ddTHH:mm:ssZ.|
-|OperationLocks|Array of [OperationLocksType]()|The cause of locked DDH resources.|
+|SaleCycle|String|The billing cycle of the subscription DDH.|
+|ExpiredTime|String|The expiration time of the subscription DDH.The time format follows the [ISO8601](../../intl.en-US/API Reference/Appendix/ISO 8601 Time Format.md#) standard, and the UTC time is used. The format is yyyy-MM-ddTHH:mm:ssZ.|
+|OperationLocks|Array of [OperationLocksType]()|The reason why DDH resources were locked.|
+|AutoPlacement|String|Indicates whether the DDH was added to the automatic deployment resource pool. Valid values: -   on: indicates that the DDH was added to the automatic deployment resource pool.
+-   off: indicates that the DDH was not added to the automatic deployment resource pool.
 
-**DedicatedHostCapacity**
+ |
 
-|Name|Type|Required|
-|:---|:---|:-------|
-|TotalVcpus|Integer|The total number of cores in the virtual CPU.|
-|AvailableVcpus|Integer|The remaining number of cores in the virtual CPU.|
+ **DedicatedHostCapacity** 
+
+|Parameter|Type|Description|
+|:--------|:---|:----------|
+|TotalVcpus|Integer|The total number of cores in the vCPU.|
+|AvailableVcpus|Integer|The remaining number of cores in the vCPU.|
 |TotalMemory|Float|The total capacity of the memory. Unit: GiB.|
 |AvailablevMemory|Float|The remaining capacity of the memory. Unit: GiB.|
 |TotalDisk|Integer|The total capacity of the local disk. Unit: GiB.|
 |AvailableDisk|Integer|The remaining capacity of the local disk. Unit: GiB.|
 |LocalStorageCategory|String|The type of the local disk.|
 
-**Hostinstance**
+ **HostInstance** 
 
-|Name|Type|Required|
-|:---|:---|:-------|
-|InstanceId|String|The ID of the ECS instance that you have created on a DDH.|
-|InstanceType|String|The type of the ECS instance that you have created on a DDH.|
+|Parameter|Type|Description|
+|:--------|:---|:----------|
+|InstanceId|String|The ID of the ECS instance that you created on the DDH.|
+|InstanceType|String|The type of the ECS instance that you created on the DDH.|
 
-**SupportedInstanceTypeFamilySetType**
+ **SupportedInstanceTypeFamilySetType** 
 
-|Name|Type|Description|
-|:---|:---|:----------|
-|SupportedInstanceTypeFamily|String|The ECS instance type family supported by a DDH.|
+|Parameter|Type|Description|
+|:--------|:---|:----------|
+|SupportedInstanceTypeFamily|String|The ECS instance type family supported by the DDH.|
 
-**OperationLocksType**
+ **OperationLocksType** 
 
-|Name|Type|Description|
-|:---|:---|:----------|
-|LockReason|Array of [LockReasonType]()|The reason that the resource is locked.|
+|Parameter|Type|Description|
+|:--------|:---|:----------|
+|LockReason|Array of [LockReasonType]()|The reason why DDH resources were locked.|
 
-**LockReasonType**
+ **LockReasonType** 
 
-|Name|Type|Description|
-|:---|:---|:----------|
-|LockReason|String|The type of reason. Possible values:financial: You have an overdue payment.
+|Parameter|Type|Description|
+|:--------|:---|:----------|
+|LockReason|String|The type of the reason why DDH resources were locked. Valid value: financial: indicates that your account has an overdue payment.
 
-|
+ |
 
-## Samples {#Samples .section}
+## Examples {#Samples .section}
 
-**Sample requests**
+ **Sample request** 
 
 ```
 https://ecs.aliyuncs.com/?Action=DescribeDedicatedHosts
 &RegionId=cn-hangzhou
-&<Common Request Parameters>
+&<Common request parameters>
 ```
 
-**Sample responses**
+ **Sample success response** 
 
 **XML format**
 
@@ -145,7 +149,7 @@ https://ecs.aliyuncs.com/?Action=DescribeDedicatedHosts
       </Capacity>
       <OperationLocks/>
       <MachineId>d7a1bdde71d7429097c36e44a0d1bbdb</MachineId>
-      <ExpireTime>2999-09-08T16:00:00Z</ExpireTime>
+      <ExpiredTime>2999-09-08T16:00Z</ExpiredTime>
     </DedicatedHost>
     <DedicatedHost>
       <DedicatedHostId>dh-2ze3lmtckdjw1pt8nr83</DedicatedHostId>
@@ -177,7 +181,7 @@ https://ecs.aliyuncs.com/?Action=DescribeDedicatedHosts
       </Capacity>
       <OperationLocks/>
       <MachineId>f9b97a46c05b38c8c9cfe2b120f26ca6</MachineId>
-      <ExpireTime>2999-09-08T16:00:00Z</ExpireTime>
+      <ExpiredTime>2999-09-08T16:00Z</ExpiredTime>
     </DedicatedHost>
   </DedicatedHosts>
   <TotalCount>2</TotalCount>
@@ -186,7 +190,7 @@ https://ecs.aliyuncs.com/?Action=DescribeDedicatedHosts
 </DescribeDedicatedHostsResponse>
 ```
 
-**JSON format**
+ **JSON format** 
 
 ```
 {
@@ -195,24 +199,24 @@ https://ecs.aliyuncs.com/?Action=DescribeDedicatedHosts
         "DedicatedHost":[
             {
                 "DedicatedHostId":"dh-dedicatedhost1",
-                "ChargeType": "PostPaid",
-                "Description": "",
+                "ChargeType":"PostPaid",
+                "Description":"",
                 "ResourceGroupId":"",
                 "SupportInstanceTypeFamilies":{
                     "SupportInstanceTypeFamily":[
-                        "ecs.se1ne",
+                        "ecs.se1ne"
                     ]
                 },
-                "Instances": {
-                    "Instance": [
+                "Instances":{
+                    "Instance":[
 
                     ]
                 },
                 "Cores":32,
-                "ZoneId":"cn-beijing-c"
+                "ZoneId":"cn-beijing-c",
                 "CreationTime":"2018-08-13T07:59Z",
                 "Sockets":2,
-                "Status": "Available",
+                "Status":"Available",
                 "DedicatedHostType":"ddh.se1ne",
                 "RegionId":"cn-beijing",
                 "DedicatedHostName":"dhZ2ze3lmtckdjw1pt8nr82Z",
@@ -228,33 +232,33 @@ https://ecs.aliyuncs.com/?Action=DescribeDedicatedHosts
                     "AvailableMemory":448
                 },
                 "OperationLocks":{
-                    "OperationLock": []
+                    "OperationLock":[
 
                     ]
                 },
                 "MachineId":"xxxx",
-                "ExpireTime":"2999-09-08T16:00:00Z",
+                "ExpiredTime":"2999-09-08T16:00Z"
             },
             {
                 "DedicatedHostId":"dh-dedicatedhost2",
-                "ChargeType": "PostPaid",
-                "Description": "",
+                "ChargeType":"PostPaid",
+                "Description":"",
                 "ResourceGroupId":"",
                 "SupportInstanceTypeFamilies":{
                     "SupportInstanceTypeFamily":[
-                        "ecs.se1ne",
+                        "ecs.se1ne"
                     ]
                 },
-                "Instances": {
-                    "Instance": [
+                "Instances":{
+                    "Instance":[
 
                     ]
                 },
                 "Cores":32,
-                "ZoneId":"cn-beijing-c"
+                "ZoneId":"cn-beijing-c",
                 "CreationTime":"2018-08-13T07:59Z",
                 "Sockets":2,
-                "Status": "Available",
+                "Status":"Available",
                 "DedicatedHostType":"ddh.se1ne",
                 "RegionId":"cn-beijing",
                 "DedicatedHostName":"xxxxx",
@@ -270,12 +274,12 @@ https://ecs.aliyuncs.com/?Action=DescribeDedicatedHosts
                     "AvailableMemory":448
                 },
                 "OperationLocks":{
-                    "OperationLock": []
+                    "OperationLock":[
 
                     ]
                 },
                 "MachineId":"f9b97a46c05b38c8c9cfe2b120f26xxxx",
-                "ExpireTime":"2999-09-08T16:00:00Z",
+                "ExpiredTime":"2999-09-08T16:00Z"
             }
         ]
     },
@@ -287,8 +291,8 @@ https://ecs.aliyuncs.com/?Action=DescribeDedicatedHosts
 
 ## Error codes {#ErrorCode .section}
 
-|Error code|Error message|HTTP status code |Description|
-|:---------|:------------|:----------------|:----------|
-|DedicatedHostType.Invalid|The specified DedicatedHostType is invalid.|400|The error message returned when the specified DedicatedHostType parameter is invalid.|
-|InternalError|The request processing task has failed due to an unknown error, exception or failure.|500|The error message returned when an unknown internal error occurs.|
+|Error code|Error message|HTTP status code|Description|
+|:---------|:------------|:---------------|:----------|
+|DedicatedHostType.Invalid|The specified DedicatedHostType is invalid.|400|The error message returned because the specified DedicatedHostType parameter is invalid.|
+|InternalError|The request processing has failed due to some unknown error,exception or failure.|500|The error message returned because an internal error has occurred.|
 
