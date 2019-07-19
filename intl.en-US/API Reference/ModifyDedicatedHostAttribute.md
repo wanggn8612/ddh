@@ -1,46 +1,48 @@
 # ModifyDedicatedHostAttribute {#ModifyDedicatedHostAttribute .reference}
 
-You can call this operation to modify the information of a DDH, including the name of the DDH, the description of the DDH, and the service unavailability attributes.
+You can call this operation to modify the information about a Dedicated Host \(DDH\), including the name, description, and service unavailability attributes of the DDH.
 
 ## Request parameters {#RequestParameter .section}
 
-|Name|Type|Required|Description|
-|:---|:---|:-------|:----------|
-|Action|String|Yes|The operation that you want to perform. Set the value to ModifyDedicatedHostAttribute|
-|RegionId|String|Yes|The ID of the region where the DDH is created.For more information, call [DescribeRegions](../../intl.en-US/API Reference/Regions/DescribeRegions.md#) to obtain the latest region list.|
+|Parameter|Type|Required|Description|
+|:--------|:---|:-------|:----------|
+|Action|String|Yes|The operation that you want to perform. Set this parameter to ModifyDedicatedHostAttribute.|
+|RegionId|String|Yes|The region ID of the DDH.For more information, call [DescribeRegions](../../intl.en-US/API Reference/Regions/DescribeRegions.md#) to obtain the latest region list.|
 |DedicatedHostId|String|Yes|The ID of the DDH.|
-|DedicatedHostName|String|No|The name of the DDH. The name is a string of 2 to 128 characters. It must begin with an English or a Chinese character. It can contain A-Z, a-z, Chinese characters, numbers, periods \(.\), colons \(:\), underscores \(\_\), and hyphens \(-\).|
-|Description|String|No|The description of the DDH. It cannot begin with http:// or https://.|
-|ActionOnMaintenance| String|No|This value that is used to migrate the instances when a DDH failure occurs or the DDH needs to be repaired. Valid values:-   Migrate: Migrates instances to other physical servers and restarts the instances.
+|DedicatedHostName|String|No|The name of the DDH.The name is a string of 2 to 128 characters. It must begin with an English or a Chinese character. It can contain A-Z, a-z, Chinese characters, numbers, periods \(.\), colons \(:\), underscores \(\_\), and hyphens \(-\).|
+|Description|String|No|The description of the DDH.It cannot begin with http:// or https://.|
+|ActionOnMaintenance|String|No|The method used to migrate the instances on the DDH when the DDH fails or needs to be repaired online. Valid values: -   Migrate: specifies that the instances are migrated to another physical server and restarted.
+-   Stop: specifies that all the instances on the DDH are stopped. If the DDH cannot be repaired, the instances are migrated to another physical server and restarted.
 
-This method is selected when cloud disks are mounted to the DDH.
+ When a cloud disk is attached to the DDH, the default value is Migrate.
 
--   Stop: Stops all instances on the DDH, migrates the instances to another physical server, and restarts the instances if the DDH cannot be repaired.
+ When a local disk is attached to the DDH, the default value is Stop.
 
-This method is selected when local disks are mounted to the DDH.
+ |
+|NetworkAttributes.SlbUdpTimeout|Integer|No|The timeout period of UDP sessions that are established with Server Load Balancer \(SLB\). Unit: seconds. Valid values: \[15, 310\].|
+|NetworkAttributes.UdpTimeout|Integer|No|The timeout period of UDP sessions that are established between users and cloud services running on the DDH. Unit: seconds. Valid values: \[15, 310\].|
+|AutoPlacement|String|No|Specifies whether the DDH is added to the automatic deployment resource pool. If you create an instance on a DDH without specifying the DedicatedHostId parameter, Alibaba Cloud automatically selects a DDH from the resource pool to host the instance. Valid values: -   on: adds the DDH to the automatic deployment resource pool.
+-   off: does not add the DDH to the automatic deployment resource pool.
 
-
-|
-|NetworkAttributes.SlbUdpTimeout|Integer|No|The timeout of the UDP session that is established to SLB. Unit: seconds. Value range: \[15,310\]|
-|NetworkAttributes.UdpTimeout|Integer|No|The timeout of UDP sessions that are established from users to cloud services on the DDH. Unit: seconds. Value range: \[15,310\]|
+ |
 
 ## Response parameters {#ResponseParameter .section}
 
 All are common response parameters. See [Common response parameters](../../intl.en-US/API Reference/Getting started/Common parameters.md#commonResponseParameters).
 
-## Samples {#Samples .section}
+## Examples {#Samples .section}
 
-**Sample requests** 
+ **Sample request** 
 
 ```
 https://ecs.aliyuncs.com/?Action=ModifyDedicatedHostAttribute
 &RegionId=cn-hangzhou
 &DedicatedHostId=dh-dedicatedhost1
 &Description=hello-world
-&<Common Request Parameters>
+&<Common request parameters>
 ```
 
-**Sample responses**
+ **Sample success response** 
 
 **XML format**
 
@@ -50,7 +52,7 @@ https://ecs.aliyuncs.com/?Action=ModifyDedicatedHostAttribute
 </ModifyDedicatedHostAttributeResponse>
 ```
 
-**JSON format**
+ **JSON format** 
 
 ```
 {
@@ -62,9 +64,9 @@ https://ecs.aliyuncs.com/?Action=ModifyDedicatedHostAttribute
 
 |Error code|Error message|HTTP status code|Description|
 |:---------|:------------|:---------------|:----------|
-|InvalidInstanceName.Malformed|The specified parameter DedicatedHostName is not valid.|400|The error message returned when parameter DedicatedHostName is invalid.|
-|InvalidDescription.Malformed|The specified parameter Description is not valid.|400|The error returned when the specified Descrption parameter is invalid.|
-|InvalidUser.Unauthorized|The user is not authorized|401|The error message returned when you are not authorized to modify the information about this dedicated host.|
-|InvalidDedicatedHostId.NotFound|The specified RegionId does not exist.|404|The error message returned when the specified DDH ID does not exist.|
-|InternalError|The request processing has failed due to an unknown error, exception or failure.|500|The error message returned when an unknown internal error occurs.|
+|InvalidInstanceName.Malformed|The specified parameter DedicatedHostName is not valid.|400|The error message returned because the specified DedicatedHostName parameter is invalid.|
+|InvalidDescription.Malformed|The specified parameter Description is not valid.|400|The error message returned because the specified Description parameter is invalid.|
+|InvalidUser.Unauthorized|The user is not authorized|401|The error message returned because you are not authorized to modify the information about this DDH.|
+|InvalidDedicatedHostId.NotFound|The specified DedicatedHostId does not exist.|404|The error message returned because the specified DedicatedHostId parameter does not exist.|
+|InternalError|The request processing has failed due to some unknown error,exception or failure.|500|The error message returned because an internal error has occurred.|
 
