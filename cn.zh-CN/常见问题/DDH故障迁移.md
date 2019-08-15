@@ -16,7 +16,7 @@
 
 **说明：** 带有本地盘的宿主机（如本地SSD型 i2）不支持自动宕机迁移服务。
 
-若您未开启DDH故障迁移服务，DDH发生故障停机后，您需要[提交工单](https://selfservice.console.aliyun.com/ticket/createIndex)申请置换一台健康的DDH。
+若您未开启DDH故障迁移服务，DDH发生故障停机后，您需要[提交工单](https://workorder-intl.console.aliyun.com/#/overview)申请置换一台健康的DDH。
 
 迁移完成后，DDH ID及ECS实例的元数据（比如实例ID、私有IP地址、公网IP地址）均保持不变，但是由于物理机更换，DDH的机器码会改变。
 

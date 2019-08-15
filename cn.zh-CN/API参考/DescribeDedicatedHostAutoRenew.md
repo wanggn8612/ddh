@@ -20,7 +20,7 @@
 |PeriodUnit|String|续费单位。可能值：Week | Month|
 |RenewalStatus|String|是否自动续费预付费的专有宿主机。可能值：-   AutoRenewal：自动续费。
 -   Normal：待续费。
--   NotRenewal：不续费，也不发送到期提醒。到期前第三天我们会发送不续费提醒。不续费的专有宿主机可以设置成待续费（Normal），再自行续费（[RenewDedicatedHosts](intl.zh-CN/API参考/RenewDedicatedHosts.md#)）或设置为自动续费（AutoRenewal）。
+-   NotRenewal：不续费，也不发送到期提醒。到期前第三天我们会发送不续费提醒。不续费的专有宿主机可以设置成待续费（Normal），再自行续费（[RenewDedicatedHosts](cn.zh-CN/API参考/RenewDedicatedHosts.md#)）或设置为自动续费（AutoRenewal）。
 
 |
 
