@@ -7,7 +7,7 @@
 |名称|类型|是否必需|描述|
 |:-|:-|:---|:-|
 |Action|String|是|系统规定参数。取值：DescribeDedicatedHosts|
-|RegionId|String|是|专有宿主机所属的地域ID。您可以调用[DescribeRegions](../../cn.zh-CN/API参考/地域/DescribeRegions.md#)查看最新的阿里云地域列表。|
+|RegionId|String|是|专有宿主机所属的地域ID。您可以调用[DescribeRegions](../../intl.zh-CN/API参考/地域/DescribeRegions.md#)查看最新的阿里云地域列表。|
 |ZoneId|String|否|可用区ID。|
 |DedicatedHostIds|Array|否|专有宿主机ID列表。单次最多支持100个ID ，多个ID用一个格式类似\[“dh- xxxxxxxxx”, “dh- yyyyyyyyy”, … “dh- zzzzzzzzz”\]的JSON 数组表示，ID之间用半角逗号（`,`）隔开。|
 |DedicatedHostName|String|否|专有宿主机名称。|
@@ -52,10 +52,10 @@
 |Capacity|Array of [DedicatedHostCapacity](#)|专有宿主机性能指标集合。|
 |Instances|Array of [HostInstance](#)|专有宿主机上已创建的ECS实例信息集合。|
 |Status|String|专有宿主机的使用状态。可能值：Available | Under-Assessment | Permanent-Failure|
-|CreationTime|String|创建时间。按照[ISO8601](../../cn.zh-CN/API参考/附录/时间格式.md#)标准表示，并需要使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。|
+|CreationTime|String|创建时间。按照[ISO8601](../../intl.zh-CN/API参考/附录/时间格式.md#)标准表示，并需要使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。|
 |ChargeType|String|专有宿主机的计费方式。|
 |SaleCycle|String|预付费专有宿主机的计费周期。|
-|ExpiredTime|String|预付费专有宿主机的到期时间。按照[ISO8601](../../cn.zh-CN/API参考/附录/时间格式.md#)标准表示，并需要使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。|
+|ExpiredTime|String|预付费专有宿主机的到期时间。按照[ISO8601](../../intl.zh-CN/API参考/附录/时间格式.md#)标准表示，并需要使用UTC时间，格式为yyyy-MM-ddTHH:mm:ssZ。|
 |OperationLocks|Array of [OperationLocksType]()|专有宿主机资源被锁定原因。|
 |AutoPlacement|String|专有宿主机是否加入自动部署资源池。取值范围： -   on：加入自动部署资源池。
 -   off：不加入自动部署资源池。

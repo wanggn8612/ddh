@@ -7,7 +7,7 @@
 |名称|类型|是否必需|描述|
 |:-|:-|:---|:-|
 |Action|String|是|系统规定参数。取值：ModifyDedicatedHostAttribute|
-|RegionId|String|是|专有宿主机所属的地域ID。您可以调用[DescribeRegions](../../cn.zh-CN/API参考/地域/DescribeRegions.md#)查看最新的阿里云地域列表。|
+|RegionId|String|是|专有宿主机所属的地域ID。您可以调用[DescribeRegions](../../intl.zh-CN/API参考/地域/DescribeRegions.md#)查看最新的阿里云地域列表。|
 |DedicatedHostId|String|是|专有宿主机ID。|
 |DedicatedHostName|String|否|专有宿主机名称。长度为 \[2, 128\] 个英文或中文字符。必须以大小字母或中文开头，不能以 http:// 和 https:// 开头。可以包含数字、半角冒号（:）、下划线（\_）或者连字符（-）。|
 |Description|String|否|专有宿主机的描述。长度为 \[2, 256\] 个英文或中文字符，不能以 http:// 和 https:// 开头。|
@@ -28,7 +28,7 @@
 
 ## 返回参数 {#ResponseParameter .section}
 
-全是公共返回参数。参阅[公共返回参数](../../cn.zh-CN/API参考/快速入门/公共参数.md#commonResponseParameters)。
+全是公共返回参数。参阅[公共返回参数](../../intl.zh-CN/API参考/快速入门/公共参数.md#commonResponseParameters)。
 
 ## 示例 {#Samples .section}
 

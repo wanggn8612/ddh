@@ -4,23 +4,23 @@
 
 ## 描述 {#Details .section}
 
-创建专有宿主机前，您可以调用[DescribeAvailableResource](cn.zh-CN/API参考/地域/DescribeAvailableResource.md#)查看指定地域或者可用区内的资源供给情况。
+创建专有宿主机前，您可以调用[DescribeAvailableResource](intl.zh-CN/API参考/地域/DescribeAvailableResource.md#)查看指定地域或者可用区内的资源供给情况。
 
-创建专有宿主机前会涉及到资源计费，建议您提前了解计费方式。更多详情，请参见[计费概述](../cn.zh-CN/产品定价/计费概述.md#)。
+创建专有宿主机前会涉及到资源计费，建议您提前了解计费方式。更多详情，请参见[计费概述](../intl.zh-CN/产品定价/计费概述.md#)。
 
 -   单次最多能创建100台预付费专有宿主机。
--   创建成功后，会返回专有宿主机ID列表。您可通过该列表和[DescribeDedicatedHosts](cn.zh-CN/API参考/DescribeDedicatedHosts.md#)查询新建专有宿主机状态。
--   当新建专有宿主机状态为**可用**（`Available`）后，您可以在宿主机上开始创建ECS实例。 关于专有宿主机的生命周期状态，请参见[生命周期](../cn.zh-CN/产品简介/生命周期.md#)。
+-   创建成功后，会返回专有宿主机ID列表。您可通过该列表和[DescribeDedicatedHosts](intl.zh-CN/API参考/DescribeDedicatedHosts.md#)查询新建专有宿主机状态。
+-   当新建专有宿主机状态为**可用**（`Available`）后，您可以在宿主机上开始创建ECS实例。 关于专有宿主机的生命周期状态，请参见[生命周期](../intl.zh-CN/产品简介/生命周期.md#)。
 -   提交创建任务后，参数不合规或者专有宿主机库存不足的情况下会报错。具体的报错原因，请参见[错误码](#)。
--   创建专有宿主机后，您可以通过[ModifyInstanceDeployment](cn.zh-CN/API参考/部署集/ModifyInstanceDeployment.md#)将ECS实例从共享宿主机迁移到专有宿主机，也可以在两台专有宿主机上调整实例部署。
+-   创建专有宿主机后，您可以通过[ModifyInstanceDeployment](intl.zh-CN/API参考/部署集/ModifyInstanceDeployment.md#)将ECS实例从共享宿主机迁移到专有宿主机，也可以在两台专有宿主机上调整实例部署。
 
 ## 请求参数 {#RequestParameter .section}
 
 |名称|类型|是否必需|描述|
 |:-|:-|:---|:-|
 |Action|String|是|系统规定参数。取值 ：AllocateDedicatedHosts|
-|RegionId|String|是|专有宿主机所属的地域 ID。您可以调用[DescribeRegions](../../cn.zh-CN/API参考/地域/DescribeRegions.md#)查看最新的阿里云地域列表。|
-|DedicatedHostType|String|是|专有宿主机规格。您可以调用[DescribeDedicatedHostTypes](cn.zh-CN/API参考/DescribeDedicatedHostTypes.md#)接口获得最新的专有宿主机规格表 。|
+|RegionId|String|是|专有宿主机所属的地域 ID。您可以调用[DescribeRegions](../../intl.zh-CN/API参考/地域/DescribeRegions.md#)查看最新的阿里云地域列表。|
+|DedicatedHostType|String|是|专有宿主机规格。您可以调用[DescribeDedicatedHostTypes](intl.zh-CN/API参考/DescribeDedicatedHostTypes.md#)接口获得最新的专有宿主机规格表 。|
 |Quantity|Integer|否|本次创建的专有宿主机的数量。取值范围：\[1, 100\] 默认值：1
 
  |
@@ -57,7 +57,7 @@
 |NetworkAttributes.UdpTimeout|Integer|否|为专有宿主机上运行的云服务设置用户访问的UDP会话超时时间，单位：秒。取值范围：\[15, 310\]|
 |Tag.n.Key|String|否|专有宿主机的标签键。n 的取值范围：\[1, 20\]。一旦传入该值，则不允许为空字符串。最多支持 64 个字符，不能以 aliyun、acs:、http:// 或者 https:// 开头。|
 |Tag.n.Value|String|否|专有宿主机的标签值。n的取值范围：\[1, 20\]。一旦传入该值，可以为空字符串。最多支持 128 个字符，不能以 aliyun、acs:、http:// 或者 https:// 开头。|
-|ClientToken|String|否| 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。只支持ASCII字符，且不能超过64个字符。更多详情，请参阅[如何保证幂等性](../../cn.zh-CN/API参考/附录/如何保证幂等性.md#)。
+|ClientToken|String|否| 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。只支持ASCII字符，且不能超过64个字符。更多详情，请参阅[如何保证幂等性](../../intl.zh-CN/API参考/附录/如何保证幂等性.md#)。
 
  |
 |AutoReleaseTime|String|否|设置专有宿主机自动释放时间。格式：`yyyy-MM-ddTHH:mm:ssZ` **说明：** 
