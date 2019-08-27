@@ -36,15 +36,15 @@ DDH是基于虚拟化技术的云服务器。弹性裸金属服务器（ECS Bare
 
 ## 怎么创建和释放DDH？ {#section_6 .section}
 
-目前您只能通过[ECS管理控制台](https://ecs.console.aliyun.com/#/home)创建DDH。详细信息请参见[创建DDH](../../../../cn.zh-CN/快速入门/创建包年包月DDH.md#)。预付费DDH到期一段时间后如果没有续费，则自动释放，详细信息请参见[预付费](../../../../cn.zh-CN/产品定价/预付费.md#)。
+目前您只能通过[ECS管理控制台](https://ecs.console.aliyun.com/#/home)创建DDH。详细信息请参见[创建DDH](../../../../cn.zh-CN/快速入门/创建DDH.md#)。包年包月DDH到期一段时间后如果没有续费，则自动释放，详细信息请参见[包年包月](../../../../cn.zh-CN/产品定价/包年包月.md#)。
 
 ## 怎么查看每台DDH上有多少可用资源？ {#section_7 .section}
 
-每种规格的DDH的资源总量，请参见[宿主机规格](../../../../cn.zh-CN/产品简介/宿主机规格.md#)。正在使用的DDH，您可以在[ECS管理控制台](https://ecs.console.aliyun.com/#/home)上查看剩余可用的资源，具体操作，请参见[查看DDH的资源](../../../../cn.zh-CN/用户指南/查看DDH的资源.md#)。
+每种规格的DDH的资源总量，请参见[宿主机规格](../../../../cn.zh-CN/产品简介/宿主机规格.md#)。正在使用的DDH，您可以在[ECS管理控制台](https://ecs.console.aliyun.com/#/home)上查看剩余可用的资源，具体操作，请参见[查看DDH资源](../../../../cn.zh-CN/用户指南/查看DDH资源.md#)。
 
 ## 能将共享宿主机上的ECS实例迁移到DDH上吗？ {#section_8 .section}
 
-能。您能使用[ECS管理控制台](https://ecs.console.aliyun.com/#/home)将共享宿主机上的ECS实例迁移到同一账号下的DDH上。ECS实例重启之后就会部署在指定的DDH上。您不能迁移预付费ECS实例和竞价实例。具体操作，请参见[将ECS实例从共享宿主机迁移到DDH](../../../../cn.zh-CN/用户指南/将ECS实例从共享宿主机迁移到DDH.md#)。
+能。您能使用[ECS管理控制台](https://ecs.console.aliyun.com/#/home)将共享宿主机上的ECS实例迁移到同一账号下的DDH上。ECS实例重启之后就会部署在指定的DDH上。您不能迁移包年包月ECS实例和竞价实例。具体操作，请参见[将ECS实例从共享宿主机迁移到DDH](../../../../cn.zh-CN/用户指南/将ECS实例从共享宿主机迁移到DDH.md#)。
 
 ## 怎么在DDH上使用自带许可 \(BYOL\)？ {#section_9 .section}
 
