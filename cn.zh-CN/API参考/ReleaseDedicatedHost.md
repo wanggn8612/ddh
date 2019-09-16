@@ -1,56 +1,77 @@
-# ReleaseDedicatedHost {#ReleaseDedicatedHost .reference}
+# ReleaseDedicatedHost {#doc_api_Ecs_ReleaseDedicatedHost .reference}
 
-释放一台按量付费专有宿主机，待释放的专有宿主机上不能宿有 ECS 实例。
+调用ReleaseDedicatedHost释放一台按量付费专有宿主机。
 
-## 请求参数 {#RequestParameter .section}
+## 接口说明 {#description .section}
 
-|名称|类型|是否必需|描述|
-|:-|:-|:---|:-|
-|Action|String|是|系统规定参数。取值：ReleaseDedicatedHost|
-|RegionId|String|是|专有宿主机所属的地域 ID。您可以调用[DescribeRegions](../../cn.zh-CN/API参考/地域/DescribeRegions.md#)查看最新的阿里云地域列表。|
-|DedicatedHostId|String|是|专有宿主机 ID。|
+释放按量付费专有宿主机之前，请确保该宿主机上不存在任何ECS实例。
 
-## 返回参数 {#ResponseParameter .section}
+## 调试 {#api_explorer .section}
 
-全是公共返回参数。参阅[公共返回参数](../../cn.zh-CN/API参考/HTTP调用方式/公共参数.md#commonResponseParameters)。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Ecs&api=ReleaseDedicatedHost&type=RPC&version=2014-05-26)
 
-## 示例 {#Samples .section}
+## 请求参数 {#parameters .section}
 
-**请求示例** 
+|名称|类型|是否必选|示例值|描述|
+|--|--|----|---|--|
+|DedicatedHostId|String|是|dh-xxxxxxxxxxxxxxxxx|专有宿主机ID。
 
-```
-https://ecs.aliyuncs.com/?Action=ReleaseDedicatedHost
+ |
+|RegionId|String|是|cn-hangzhou|专有宿主机所属的地域ID。您可以调用[DescribeRegions](~~25609~~)查看最新的阿里云地域列表。
+
+ |
+|Action|String|否|ReleaseDedicatedHost|系统规定参数。取值：ReleaseDedicatedHost
+
+ |
+
+## 返回数据 {#resultMapping .section}
+
+|名称|类型|示例值|描述|
+|--|--|---|--|
+|RequestId|String|A1B15AC8-E6F6-49A4-8985-8C07104B9199|请求ID。
+
+ |
+
+## 示例 {#demo .section}
+
+请求示例
+
+``` {#request_demo}
+
+http(s)://ecs.aliyuncs.com/?Action=ReleaseDedicatedHost
+&DedicatedHostId=dh-xxxxxxxxxxxxxxxxx
 &RegionId=cn-hangzhou
-&DedicatedHostId=dh-dedicatedhost1
 &<公共请求参数>
-```
-
-**返回示例**
-
-**XML 格式**
 
 ```
+
+正常返回示例
+
+`XML` 格式
+
+``` {#xml_return_success_demo}
 <ReleaseDedicatedHostResponse>
-  <RequestId>A1B15AC8-E6F6-49A4-8985-8C07104B9199</RequestId>
+    <RequestId>A1B15AC8-E6F6-49A4-8985-8C07104B9199</RequestId>
 </ReleaseDedicatedHostResponse>
 ```
 
-**JSON 格式**
+`JSON` 格式
 
-```
+``` {#json_return_success_demo}
 {
-    "RequestId":"A1B15AC8-E6F6-49A4-8985-8C07104B9199"
+	"RequestId":"A1B15AC8-E6F6-49A4-8985-8C07104B9199"
 }
 ```
 
-## 错误码 {#ErrorCode .section}
+## 错误码 { .section}
 
-以下为本接口特有的错误码。更多错误码，请访问[API错误中心](https://error-center.aliyun.com/status/product/Ecs)。
+|HttpCode|错误码|错误信息|描述|
+|--------|---|----|--|
+|403|InstanceExist|Instance exists on the dedicated host.|还有实例在宿主机上，不支持释放。|
+|400|ChargeTypeViolation|The operation is not permitted due to charge type of the dedicated host.|当前宿主机付费类型不支持释放操作。|
+|400|IncorrectHostStatus.Initializing|The specified dedicatedHost status is not support this operation|当前宿主机状态不支持当前操作。|
+|404|InvalidDedicatedHostId.NotFound|The specified DedicatedHostId does not exist.|指定的专有宿主机ID不存在。|
+|500|InternalError|The request processing has failed due to some unknown error.|内部错误，请重试。如果多次尝试失败，请提交工单。|
 
-|错误代码|错误信息|HTTP 状态码|说明|
-|:---|:---|:-------|:-|
-|InstanceExist|Instance exists on the dedicated host.|400|专有宿主机上有未释放的 ECS 实例。|
-|OperationDenied.NotAuthorized|End user is not authorized to release the dedicated host.|403|您未被授权释放该专有宿主机。|
-|InvalidDedicatedHostId.NotFound|The specified DedicatedHostId does not exist.|404|指定专有宿主机 ID 不存在。|
-|InternalError|The request processing has failed due to some unknown error,exception or failure.|500|内部错误。|
+访问[错误中心](https://error-center.aliyun.com/status/product/Ecs)查看更多错误码。
 
